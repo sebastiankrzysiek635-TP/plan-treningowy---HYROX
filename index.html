@@ -154,19 +154,25 @@
       z-index: 1;
     }
     .exercise-cell {
-      min-width: 260px;
-      width: 260px;
-      max-width: 260px;
+      min-width: 180px;
+      width: 180px;
+      max-width: 180px;
     }
     .goal-cell {
-      min-width: 220px;
-      width: 220px;
-      max-width: 220px;
+      min-width: 180px;
+      width: 180px;
+      max-width: 180px;
       color: var(--muted);
       font-size: 13px;
-      line-height: 1.4;
+      line-height: 1.35;
+      white-space: normal;
+      word-break: break-word;
     }
-    .week-col { min-width: 230px; }
+    .week-col {
+      min-width: 210px;
+      width: 210px;
+      max-width: 210px;
+    }
     .week-box { display: grid; gap: 8px; }
     .series-grid {
       display: grid;
@@ -340,7 +346,11 @@
       h1 { font-size: 23px; }
       .section { padding: 9px; }
       table { font-size: 11px; }
-      .week-col { min-width: 200px; }
+      .week-col {
+      min-width: 210px;
+      width: 210px;
+      max-width: 210px;
+    }
       .series-grid.two, .series-grid.three { grid-template-columns: 1fr; }
       .vertical-row { grid-template-columns: 1fr; }
       .hero-main {
@@ -382,17 +392,38 @@
       }
 
       .exercise-cell {
-        min-width: 180px !important;
-        width: 180px !important;
-        max-width: 180px !important;
+        min-width: 145px !important;
+        width: 145px !important;
+        max-width: 145px !important;
       }
       .goal-cell {
-        min-width: 140px !important;
-        width: 140px !important;
-        max-width: 140px !important;
+        min-width: 145px !important;
+        width: 145px !important;
+        max-width: 145px !important;
         font-size: 11px !important;
         line-height: 1.3 !important;
       }
+      .week-col {
+        min-width: 186px !important;
+        width: 186px !important;
+        max-width: 186px !important;
+      }
+
+      .exercise-cell {
+      min-width: 180px;
+      width: 180px;
+      max-width: 180px;
+    }
+      .goal-cell {
+      min-width: 180px;
+      width: 180px;
+      max-width: 180px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+      white-space: normal;
+      word-break: break-word;
+    }
       .hyrox-round-grid-4 {
         grid-template-columns: 112px 1fr !important;
         gap: 6px 10px !important;
@@ -416,7 +447,80 @@
         gap: 6px !important;
       }
     }
-  </style>
+  
+    .week-box {
+      display: grid;
+      gap: 8px;
+    }
+
+    .week-box input,
+    .week-box textarea {
+      width: 100%;
+    }
+
+    .series-grid.two,
+    .series-grid.three,
+    .series-grid.four {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .series-grid.two input,
+    .series-grid.three input,
+    .series-grid.four input {
+      min-width: 0;
+    }
+
+    .cardio-row .series-grid.two {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .hyrox-round-grid .series-grid.three {
+      grid-template-columns: repeat(3, minmax(72px, 1fr));
+      gap: 8px;
+    }
+
+    .hyrox-round-grid-4 .series-grid.four {
+      grid-template-columns: repeat(4, minmax(68px, 1fr));
+      gap: 8px;
+    }
+
+
+    .hyrox-legend {
+      display: grid;
+      gap: 10px;
+    }
+    .hyrox-legend div {
+      display: block;
+    }
+    .hyrox-round-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .hyrox-round-grid-4 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .hyrox-round-grid .series-grid.three {
+      grid-template-columns: repeat(3, minmax(58px, 1fr));
+      gap: 8px;
+    }
+    .hyrox-round-grid-4 .series-grid.four {
+      grid-template-columns: repeat(4, minmax(48px, 1fr));
+      gap: 8px;
+    }
+    .hyrox-round-grid input,
+    .hyrox-round-grid-4 input {
+      min-width: 0;
+      width: 100%;
+      padding: 9px 8px;
+      font-size: 12px;
+    }
+
+</style>
 </head>
 <body>
   <div class="app">
@@ -545,114 +649,25 @@
             
 
 
+
+
 <tr>
   <td class="exercise-cell">Akcent HYROX</td>
-  <td class="goal-cell">3 rundy</td>
-
-  <td>
-    <div class="week-box">
-      <div class="hyrox-round-grid">
-        <div class="hyrox-row-label">slam ball</div>
-        <div class="series-grid three">
-          <input data-key="d1e6t1a1" placeholder="seria 1">
-          <input data-key="d1e6t1a2" placeholder="seria 2">
-          <input data-key="d1e6t1a3" placeholder="seria 3">
-        </div>
-        <div class="hyrox-row-label">wyciąg</div>
-        <div class="series-grid three">
-          <input data-key="d1e6t1b1" placeholder="seria 1">
-          <input data-key="d1e6t1b2" placeholder="seria 2">
-          <input data-key="d1e6t1b3" placeholder="seria 3">
-        </div>
-        <div class="hyrox-row-label">przerwa</div>
-        <div class="series-grid three">
-          <input data-key="d1e6t1r1" placeholder="seria 1">
-          <input data-key="d1e6t1r2" placeholder="seria 2">
-          <input data-key="d1e6t1r3" placeholder="seria 3">
-        </div>
-      </div>
-      <textarea class="comment-input" data-key="d1e6t1c" placeholder="krótki komentarz"></textarea>
+  <td class="goal-cell">
+    <div class="hyrox-legend">
+      <div>3 rundy</div>
+      <div>slam ball</div>
+      <div>wyciąg</div>
+      <div>przerwa</div>
     </div>
   </td>
-
-  <td>
-    <div class="week-box">
-      <div class="hyrox-round-grid">
-        <div class="hyrox-row-label">slam ball</div>
-        <div class="series-grid three">
-          <input data-key="d1e6t2a1" placeholder="seria 1">
-          <input data-key="d1e6t2a2" placeholder="seria 2">
-          <input data-key="d1e6t2a3" placeholder="seria 3">
-        </div>
-        <div class="hyrox-row-label">wyciąg</div>
-        <div class="series-grid three">
-          <input data-key="d1e6t2b1" placeholder="seria 1">
-          <input data-key="d1e6t2b2" placeholder="seria 2">
-          <input data-key="d1e6t2b3" placeholder="seria 3">
-        </div>
-        <div class="hyrox-row-label">przerwa</div>
-        <div class="series-grid three">
-          <input data-key="d1e6t2r1" placeholder="seria 1">
-          <input data-key="d1e6t2r2" placeholder="seria 2">
-          <input data-key="d1e6t2r3" placeholder="seria 3">
-        </div>
-      </div>
-      <textarea class="comment-input" data-key="d1e6t2c" placeholder="krótki komentarz"></textarea>
-    </div>
-  </td>
-
-  <td>
-    <div class="week-box">
-      <div class="hyrox-round-grid">
-        <div class="hyrox-row-label">slam ball</div>
-        <div class="series-grid three">
-          <input data-key="d1e6t3a1" placeholder="seria 1">
-          <input data-key="d1e6t3a2" placeholder="seria 2">
-          <input data-key="d1e6t3a3" placeholder="seria 3">
-        </div>
-        <div class="hyrox-row-label">wyciąg</div>
-        <div class="series-grid three">
-          <input data-key="d1e6t3b1" placeholder="seria 1">
-          <input data-key="d1e6t3b2" placeholder="seria 2">
-          <input data-key="d1e6t3b3" placeholder="seria 3">
-        </div>
-        <div class="hyrox-row-label">przerwa</div>
-        <div class="series-grid three">
-          <input data-key="d1e6t3r1" placeholder="seria 1">
-          <input data-key="d1e6t3r2" placeholder="seria 2">
-          <input data-key="d1e6t3r3" placeholder="seria 3">
-        </div>
-      </div>
-      <textarea class="comment-input" data-key="d1e6t3c" placeholder="krótki komentarz"></textarea>
-    </div>
-  </td>
-
-  <td>
-    <div class="week-box">
-      <div class="hyrox-round-grid">
-        <div class="hyrox-row-label">slam ball</div>
-        <div class="series-grid three">
-          <input data-key="d1e6t4a1" placeholder="seria 1">
-          <input data-key="d1e6t4a2" placeholder="seria 2">
-          <input data-key="d1e6t4a3" placeholder="seria 3">
-        </div>
-        <div class="hyrox-row-label">wyciąg</div>
-        <div class="series-grid three">
-          <input data-key="d1e6t4b1" placeholder="seria 1">
-          <input data-key="d1e6t4b2" placeholder="seria 2">
-          <input data-key="d1e6t4b3" placeholder="seria 3">
-        </div>
-        <div class="hyrox-row-label">przerwa</div>
-        <div class="series-grid three">
-          <input data-key="d1e6t4r1" placeholder="seria 1">
-          <input data-key="d1e6t4r2" placeholder="seria 2">
-          <input data-key="d1e6t4r3" placeholder="seria 3">
-        </div>
-      </div>
-      <textarea class="comment-input" data-key="d1e6t4c" placeholder="krótki komentarz"></textarea>
-    </div>
-  </td>
+  <td><div class="week-box"><div class="hyrox-round-grid"><div class="series-grid three"><input data-key="d1e6t1a1" placeholder="seria 1"><input data-key="d1e6t1a2" placeholder="seria 2"><input data-key="d1e6t1a3" placeholder="seria 3"></div><div class="series-grid three"><input data-key="d1e6t1b1" placeholder="seria 1"><input data-key="d1e6t1b2" placeholder="seria 2"><input data-key="d1e6t1b3" placeholder="seria 3"></div><div class="series-grid three"><input data-key="d1e6t1r1" placeholder="seria 1"><input data-key="d1e6t1r2" placeholder="seria 2"><input data-key="d1e6t1r3" placeholder="seria 3"></div></div><textarea class="comment-input" data-key="d1e6t1c" placeholder="krótki komentarz"></textarea></div></td>
+  <td><div class="week-box"><div class="hyrox-round-grid"><div class="series-grid three"><input data-key="d1e6t2a1" placeholder="seria 1"><input data-key="d1e6t2a2" placeholder="seria 2"><input data-key="d1e6t2a3" placeholder="seria 3"></div><div class="series-grid three"><input data-key="d1e6t2b1" placeholder="seria 1"><input data-key="d1e6t2b2" placeholder="seria 2"><input data-key="d1e6t2b3" placeholder="seria 3"></div><div class="series-grid three"><input data-key="d1e6t2r1" placeholder="seria 1"><input data-key="d1e6t2r2" placeholder="seria 2"><input data-key="d1e6t2r3" placeholder="seria 3"></div></div><textarea class="comment-input" data-key="d1e6t2c" placeholder="krótki komentarz"></textarea></div></td>
+  <td><div class="week-box"><div class="hyrox-round-grid"><div class="series-grid three"><input data-key="d1e6t3a1" placeholder="seria 1"><input data-key="d1e6t3a2" placeholder="seria 2"><input data-key="d1e6t3a3" placeholder="seria 3"></div><div class="series-grid three"><input data-key="d1e6t3b1" placeholder="seria 1"><input data-key="d1e6t3b2" placeholder="seria 2"><input data-key="d1e6t3b3" placeholder="seria 3"></div><div class="series-grid three"><input data-key="d1e6t3r1" placeholder="seria 1"><input data-key="d1e6t3r2" placeholder="seria 2"><input data-key="d1e6t3r3" placeholder="seria 3"></div></div><textarea class="comment-input" data-key="d1e6t3c" placeholder="krótki komentarz"></textarea></div></td>
+  <td><div class="week-box"><div class="hyrox-round-grid"><div class="series-grid three"><input data-key="d1e6t4a1" placeholder="seria 1"><input data-key="d1e6t4a2" placeholder="seria 2"><input data-key="d1e6t4a3" placeholder="seria 3"></div><div class="series-grid three"><input data-key="d1e6t4b1" placeholder="seria 1"><input data-key="d1e6t4b2" placeholder="seria 2"><input data-key="d1e6t4b3" placeholder="seria 3"></div><div class="series-grid three"><input data-key="d1e6t4r1" placeholder="seria 1"><input data-key="d1e6t4r2" placeholder="seria 2"><input data-key="d1e6t4r3" placeholder="seria 3"></div></div><textarea class="comment-input" data-key="d1e6t4c" placeholder="krótki komentarz"></textarea></div></td>
 </tr>
+
+
 
 
 
@@ -779,118 +794,26 @@
               <td><div class="week-box"><div class="series-grid two"><input data-key="d3e4t4s1" placeholder="seria 1"><input data-key="d3e4t4s2" placeholder="seria 2"></div><textarea class="comment-input" data-key="d3e4t4c" placeholder="krótki komentarz"></textarea></div></td>
             </tr>
             
+
+
 <tr>
   <td class="exercise-cell">Blok HYROX</td>
-  <td class="goal-cell">4 rundy</td>
-
-  <td>
-    <div class="week-box">
-      <div class="hyrox-round-grid-4">
-        <div class="hyrox-row-label">2-3 min bieg albo ergometr</div>
-        <div class="series-grid four">
-          <input data-key="d3e5t1a1" placeholder="seria 1">
-          <input data-key="d3e5t1a2" placeholder="seria 2">
-          <input data-key="d3e5t1a3" placeholder="seria 3">
-          <input data-key="d3e5t1a4" placeholder="seria 4">
-        </div>
-        <div class="hyrox-row-label">15 wall balls</div>
-        <div class="series-grid four">
-          <input data-key="d3e5t1b1" placeholder="seria 1">
-          <input data-key="d3e5t1b2" placeholder="seria 2">
-          <input data-key="d3e5t1b3" placeholder="seria 3">
-          <input data-key="d3e5t1b4" placeholder="seria 4">
-        </div>
-        <div class="hyrox-row-label">15 kettlebell swing</div>
-        <div class="series-grid four">
-          <input data-key="d3e5t1k1" placeholder="seria 1">
-          <input data-key="d3e5t1k2" placeholder="seria 2">
-          <input data-key="d3e5t1k3" placeholder="seria 3">
-          <input data-key="d3e5t1k4" placeholder="seria 4">
-        </div>
-        <div class="hyrox-row-label">10-12 burpees</div>
-        <div class="series-grid four">
-          <input data-key="d3e5t1d1" placeholder="seria 1">
-          <input data-key="d3e5t1d2" placeholder="seria 2">
-          <input data-key="d3e5t1d3" placeholder="seria 3">
-          <input data-key="d3e5t1d4" placeholder="seria 4">
-        </div>
-      </div>
-      <textarea class="comment-input" data-key="d3e5t1c" placeholder="krótki komentarz"></textarea>
+  <td class="goal-cell">
+    <div class="hyrox-legend">
+      <div>4 rundy</div>
+      <div>2-3 min bieg / ergometr</div>
+      <div>15 wall balls</div>
+      <div>15 kettlebell swing</div>
+      <div>10-12 burpees</div>
     </div>
   </td>
-
-  <td>
-    <div class="week-box">
-      <div class="hyrox-round-grid-4">
-        <div class="hyrox-row-label">2-3 min bieg albo ergometr</div>
-        <div class="series-grid four">
-          <input data-key="d3e5t2a1" placeholder="seria 1"><input data-key="d3e5t2a2" placeholder="seria 2"><input data-key="d3e5t2a3" placeholder="seria 3"><input data-key="d3e5t2a4" placeholder="seria 4">
-        </div>
-        <div class="hyrox-row-label">15 wall balls</div>
-        <div class="series-grid four">
-          <input data-key="d3e5t2b1" placeholder="seria 1"><input data-key="d3e5t2b2" placeholder="seria 2"><input data-key="d3e5t2b3" placeholder="seria 3"><input data-key="d3e5t2b4" placeholder="seria 4">
-        </div>
-        <div class="hyrox-row-label">15 kettlebell swing</div>
-        <div class="series-grid four">
-          <input data-key="d3e5t2k1" placeholder="seria 1"><input data-key="d3e5t2k2" placeholder="seria 2"><input data-key="d3e5t2k3" placeholder="seria 3"><input data-key="d3e5t2k4" placeholder="seria 4">
-        </div>
-        <div class="hyrox-row-label">10-12 burpees</div>
-        <div class="series-grid four">
-          <input data-key="d3e5t2d1" placeholder="seria 1"><input data-key="d3e5t2d2" placeholder="seria 2"><input data-key="d3e5t2d3" placeholder="seria 3"><input data-key="d3e5t2d4" placeholder="seria 4">
-        </div>
-      </div>
-      <textarea class="comment-input" data-key="d3e5t2c" placeholder="krótki komentarz"></textarea>
-    </div>
-  </td>
-
-  <td>
-    <div class="week-box">
-      <div class="hyrox-round-grid-4">
-        <div class="hyrox-row-label">2-3 min bieg albo ergometr</div>
-        <div class="series-grid four">
-          <input data-key="d3e5t3a1" placeholder="seria 1"><input data-key="d3e5t3a2" placeholder="seria 2"><input data-key="d3e5t3a3" placeholder="seria 3"><input data-key="d3e5t3a4" placeholder="seria 4">
-        </div>
-        <div class="hyrox-row-label">15 wall balls</div>
-        <div class="series-grid four">
-          <input data-key="d3e5t3b1" placeholder="seria 1"><input data-key="d3e5t3b2" placeholder="seria 2"><input data-key="d3e5t3b3" placeholder="seria 3"><input data-key="d3e5t3b4" placeholder="seria 4">
-        </div>
-        <div class="hyrox-row-label">15 kettlebell swing</div>
-        <div class="series-grid four">
-          <input data-key="d3e5t3k1" placeholder="seria 1"><input data-key="d3e5t3k2" placeholder="seria 2"><input data-key="d3e5t3k3" placeholder="seria 3"><input data-key="d3e5t3k4" placeholder="seria 4">
-        </div>
-        <div class="hyrox-row-label">10-12 burpees</div>
-        <div class="series-grid four">
-          <input data-key="d3e5t3d1" placeholder="seria 1"><input data-key="d3e5t3d2" placeholder="seria 2"><input data-key="d3e5t3d3" placeholder="seria 3"><input data-key="d3e5t3d4" placeholder="seria 4">
-        </div>
-      </div>
-      <textarea class="comment-input" data-key="d3e5t3c" placeholder="krótki komentarz"></textarea>
-    </div>
-  </td>
-
-  <td>
-    <div class="week-box">
-      <div class="hyrox-round-grid-4">
-        <div class="hyrox-row-label">2-3 min bieg albo ergometr</div>
-        <div class="series-grid four">
-          <input data-key="d3e5t4a1" placeholder="seria 1"><input data-key="d3e5t4a2" placeholder="seria 2"><input data-key="d3e5t4a3" placeholder="seria 3"><input data-key="d3e5t4a4" placeholder="seria 4">
-        </div>
-        <div class="hyrox-row-label">15 wall balls</div>
-        <div class="series-grid four">
-          <input data-key="d3e5t4b1" placeholder="seria 1"><input data-key="d3e5t4b2" placeholder="seria 2"><input data-key="d3e5t4b3" placeholder="seria 3"><input data-key="d3e5t4b4" placeholder="seria 4">
-        </div>
-        <div class="hyrox-row-label">15 kettlebell swing</div>
-        <div class="series-grid four">
-          <input data-key="d3e5t4k1" placeholder="seria 1"><input data-key="d3e5t4k2" placeholder="seria 2"><input data-key="d3e5t4k3" placeholder="seria 3"><input data-key="d3e5t4k4" placeholder="seria 4">
-        </div>
-        <div class="hyrox-row-label">10-12 burpees</div>
-        <div class="series-grid four">
-          <input data-key="d3e5t4d1" placeholder="seria 1"><input data-key="d3e5t4d2" placeholder="seria 2"><input data-key="d3e5t4d3" placeholder="seria 3"><input data-key="d3e5t4d4" placeholder="seria 4">
-        </div>
-      </div>
-      <textarea class="comment-input" data-key="d3e5t4c" placeholder="krótki komentarz"></textarea>
-    </div>
-  </td>
+  <td><div class="week-box"><div class="hyrox-round-grid-4"><div class="series-grid four"><input data-key="d3e5t1a1" placeholder="seria 1"><input data-key="d3e5t1a2" placeholder="seria 2"><input data-key="d3e5t1a3" placeholder="seria 3"><input data-key="d3e5t1a4" placeholder="seria 4"></div><div class="series-grid four"><input data-key="d3e5t1b1" placeholder="seria 1"><input data-key="d3e5t1b2" placeholder="seria 2"><input data-key="d3e5t1b3" placeholder="seria 3"><input data-key="d3e5t1b4" placeholder="seria 4"></div><div class="series-grid four"><input data-key="d3e5t1k1" placeholder="seria 1"><input data-key="d3e5t1k2" placeholder="seria 2"><input data-key="d3e5t1k3" placeholder="seria 3"><input data-key="d3e5t1k4" placeholder="seria 4"></div><div class="series-grid four"><input data-key="d3e5t1d1" placeholder="seria 1"><input data-key="d3e5t1d2" placeholder="seria 2"><input data-key="d3e5t1d3" placeholder="seria 3"><input data-key="d3e5t1d4" placeholder="seria 4"></div></div><textarea class="comment-input" data-key="d3e5t1c" placeholder="krótki komentarz"></textarea></div></td>
+  <td><div class="week-box"><div class="hyrox-round-grid-4"><div class="series-grid four"><input data-key="d3e5t2a1" placeholder="seria 1"><input data-key="d3e5t2a2" placeholder="seria 2"><input data-key="d3e5t2a3" placeholder="seria 3"><input data-key="d3e5t2a4" placeholder="seria 4"></div><div class="series-grid four"><input data-key="d3e5t2b1" placeholder="seria 1"><input data-key="d3e5t2b2" placeholder="seria 2"><input data-key="d3e5t2b3" placeholder="seria 3"><input data-key="d3e5t2b4" placeholder="seria 4"></div><div class="series-grid four"><input data-key="d3e5t2k1" placeholder="seria 1"><input data-key="d3e5t2k2" placeholder="seria 2"><input data-key="d3e5t2k3" placeholder="seria 3"><input data-key="d3e5t2k4" placeholder="seria 4"></div><div class="series-grid four"><input data-key="d3e5t2d1" placeholder="seria 1"><input data-key="d3e5t2d2" placeholder="seria 2"><input data-key="d3e5t2d3" placeholder="seria 3"><input data-key="d3e5t2d4" placeholder="seria 4"></div></div><textarea class="comment-input" data-key="d3e5t2c" placeholder="krótki komentarz"></textarea></div></td>
+  <td><div class="week-box"><div class="hyrox-round-grid-4"><div class="series-grid four"><input data-key="d3e5t3a1" placeholder="seria 1"><input data-key="d3e5t3a2" placeholder="seria 2"><input data-key="d3e5t3a3" placeholder="seria 3"><input data-key="d3e5t3a4" placeholder="seria 4"></div><div class="series-grid four"><input data-key="d3e5t3b1" placeholder="seria 1"><input data-key="d3e5t3b2" placeholder="seria 2"><input data-key="d3e5t3b3" placeholder="seria 3"><input data-key="d3e5t3b4" placeholder="seria 4"></div><div class="series-grid four"><input data-key="d3e5t3k1" placeholder="seria 1"><input data-key="d3e5t3k2" placeholder="seria 2"><input data-key="d3e5t3k3" placeholder="seria 3"><input data-key="d3e5t3k4" placeholder="seria 4"></div><div class="series-grid four"><input data-key="d3e5t3d1" placeholder="seria 1"><input data-key="d3e5t3d2" placeholder="seria 2"><input data-key="d3e5t3d3" placeholder="seria 3"><input data-key="d3e5t3d4" placeholder="seria 4"></div></div><textarea class="comment-input" data-key="d3e5t3c" placeholder="krótki komentarz"></textarea></div></td>
+  <td><div class="week-box"><div class="hyrox-round-grid-4"><div class="series-grid four"><input data-key="d3e5t4a1" placeholder="seria 1"><input data-key="d3e5t4a2" placeholder="seria 2"><input data-key="d3e5t4a3" placeholder="seria 3"><input data-key="d3e5t4a4" placeholder="seria 4"></div><div class="series-grid four"><input data-key="d3e5t4b1" placeholder="seria 1"><input data-key="d3e5t4b2" placeholder="seria 2"><input data-key="d3e5t4b3" placeholder="seria 3"><input data-key="d3e5t4b4" placeholder="seria 4"></div><div class="series-grid four"><input data-key="d3e5t4k1" placeholder="seria 1"><input data-key="d3e5t4k2" placeholder="seria 2"><input data-key="d3e5t4k3" placeholder="seria 3"><input data-key="d3e5t4k4" placeholder="seria 4"></div><div class="series-grid four"><input data-key="d3e5t4d1" placeholder="seria 1"><input data-key="d3e5t4d2" placeholder="seria 2"><input data-key="d3e5t4d3" placeholder="seria 3"><input data-key="d3e5t4d4" placeholder="seria 4"></div></div><textarea class="comment-input" data-key="d3e5t4c" placeholder="krótki komentarz"></textarea></div></td>
 </tr>
+
+
 
           </tbody>
         </table>
