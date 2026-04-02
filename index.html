@@ -520,6 +520,155 @@
       font-size: 12px;
     }
 
+
+    /* ===== FINAL CLEAN LAYOUT OVERRIDE ===== */
+    html {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    .exercise-cell {
+      min-width: 180px !important;
+      width: 180px !important;
+      max-width: 180px !important;
+    }
+
+    .goal-cell {
+      min-width: 180px !important;
+      width: 180px !important;
+      max-width: 180px !important;
+      color: var(--muted) !important;
+      font-size: 13px !important;
+      line-height: 1.35 !important;
+      white-space: normal !important;
+      word-break: break-word !important;
+    }
+
+    .week-col {
+      min-width: 210px !important;
+      width: 210px !important;
+      max-width: 210px !important;
+    }
+
+    .week-box {
+      display: grid !important;
+      gap: 8px !important;
+    }
+
+    .week-box input,
+    .week-box textarea {
+      width: 100% !important;
+    }
+
+    .series-grid.two,
+    .series-grid.three,
+    .series-grid.four {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 8px !important;
+    }
+
+    .cardio-row .series-grid.two {
+      grid-template-columns: 1fr 1fr !important;
+    }
+
+    .hyrox-round-grid {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 8px !important;
+    }
+
+    .hyrox-round-grid .series-grid.three {
+      grid-template-columns: repeat(3, minmax(58px, 1fr)) !important;
+      gap: 8px !important;
+    }
+
+    .hyrox-round-grid-4 {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 8px !important;
+    }
+
+    .hyrox-round-grid-4 .series-grid.four {
+      grid-template-columns: repeat(4, minmax(48px, 1fr)) !important;
+      gap: 8px !important;
+    }
+
+    .hyrox-round-grid input,
+    .hyrox-round-grid-4 input {
+      min-width: 0 !important;
+      width: 100% !important;
+      padding: 9px 8px !important;
+      font-size: 12px !important;
+    }
+
+    .hyrox-legend {
+      display: grid !important;
+      gap: 10px !important;
+    }
+
+    .hyrox-legend div {
+      display: block !important;
+    }
+
+    @media (max-width: 760px) {
+      .app {
+        padding: 6px !important;
+      }
+
+      .section {
+        padding: 9px !important;
+      }
+
+      table {
+        font-size: 11px !important;
+      }
+
+      .exercise-cell {
+        min-width: 145px !important;
+        width: 145px !important;
+        max-width: 145px !important;
+      }
+
+      .goal-cell {
+        min-width: 145px !important;
+        width: 145px !important;
+        max-width: 145px !important;
+        font-size: 11px !important;
+        line-height: 1.3 !important;
+      }
+
+      .week-col {
+        min-width: 186px !important;
+        width: 186px !important;
+        max-width: 186px !important;
+      }
+
+      .week-box input,
+      .week-box textarea {
+        font-size: 12px !important;
+      }
+
+      .series-grid.two,
+      .series-grid.three,
+      .series-grid.four {
+        grid-template-columns: 1fr !important;
+        gap: 6px !important;
+      }
+
+      .cardio-row .series-grid.two {
+        grid-template-columns: 1fr 1fr !important;
+      }
+
+      .hyrox-round-grid .series-grid.three {
+        grid-template-columns: repeat(3, minmax(54px, 1fr)) !important;
+      }
+
+      .hyrox-round-grid-4 .series-grid.four {
+        grid-template-columns: repeat(4, minmax(50px, 1fr)) !important;
+      }
+    }
+
 </style>
 </head>
 <body>
