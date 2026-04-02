@@ -521,152 +521,18 @@
     }
 
 
-    /* ===== FINAL CLEAN LAYOUT OVERRIDE ===== */
-    html {
-      -webkit-text-size-adjust: 100%;
-      text-size-adjust: 100%;
+    .history-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
     }
-
-    .exercise-cell {
-      min-width: 180px !important;
-      width: 180px !important;
-      max-width: 180px !important;
+    .history-actions button {
+      white-space: nowrap;
     }
-
-    .goal-cell {
-      min-width: 180px !important;
-      width: 180px !important;
-      max-width: 180px !important;
-      color: var(--muted) !important;
-      font-size: 13px !important;
-      line-height: 1.35 !important;
-      white-space: normal !important;
-      word-break: break-word !important;
-    }
-
-    .week-col {
-      min-width: 210px !important;
-      width: 210px !important;
-      max-width: 210px !important;
-    }
-
-    .week-box {
-      display: grid !important;
-      gap: 8px !important;
-    }
-
-    .week-box input,
-    .week-box textarea {
-      width: 100% !important;
-    }
-
-    .series-grid.two,
-    .series-grid.three,
-    .series-grid.four {
-      display: grid !important;
-      grid-template-columns: 1fr !important;
-      gap: 8px !important;
-    }
-
-    .cardio-row .series-grid.two {
-      grid-template-columns: 1fr 1fr !important;
-    }
-
-    .hyrox-round-grid {
-      display: grid !important;
-      grid-template-columns: 1fr !important;
-      gap: 8px !important;
-    }
-
-    .hyrox-round-grid .series-grid.three {
-      grid-template-columns: repeat(3, minmax(58px, 1fr)) !important;
-      gap: 8px !important;
-    }
-
-    .hyrox-round-grid-4 {
-      display: grid !important;
-      grid-template-columns: 1fr !important;
-      gap: 8px !important;
-    }
-
-    .hyrox-round-grid-4 .series-grid.four {
-      grid-template-columns: repeat(4, minmax(48px, 1fr)) !important;
-      gap: 8px !important;
-    }
-
-    .hyrox-round-grid input,
-    .hyrox-round-grid-4 input {
-      min-width: 0 !important;
-      width: 100% !important;
-      padding: 9px 8px !important;
-      font-size: 12px !important;
-    }
-
-    .hyrox-legend {
-      display: grid !important;
-      gap: 10px !important;
-    }
-
-    .hyrox-legend div {
-      display: block !important;
-    }
-
-    @media (max-width: 760px) {
-      .app {
-        padding: 6px !important;
-      }
-
-      .section {
-        padding: 9px !important;
-      }
-
-      table {
-        font-size: 11px !important;
-      }
-
-      .exercise-cell {
-        min-width: 145px !important;
-        width: 145px !important;
-        max-width: 145px !important;
-      }
-
-      .goal-cell {
-        min-width: 145px !important;
-        width: 145px !important;
-        max-width: 145px !important;
-        font-size: 11px !important;
-        line-height: 1.3 !important;
-      }
-
-      .week-col {
-        min-width: 186px !important;
-        width: 186px !important;
-        max-width: 186px !important;
-      }
-
-      .week-box input,
-      .week-box textarea {
-        font-size: 12px !important;
-      }
-
-      .series-grid.two,
-      .series-grid.three,
-      .series-grid.four {
-        grid-template-columns: 1fr !important;
-        gap: 6px !important;
-      }
-
-      .cardio-row .series-grid.two {
-        grid-template-columns: 1fr 1fr !important;
-      }
-
-      .hyrox-round-grid .series-grid.three {
-        grid-template-columns: repeat(3, minmax(54px, 1fr)) !important;
-      }
-
-      .hyrox-round-grid-4 .series-grid.four {
-        grid-template-columns: repeat(4, minmax(50px, 1fr)) !important;
-      }
+    .last-note {
+      font-size: 11px;
+      color: rgba(157, 175, 211, 0.8);
+      margin-bottom: 6px;
     }
 
 </style>
@@ -719,11 +585,11 @@
       </div>
       <div class="field">
         <label for="mainGoal">Główny cel</label>
-        <input id="mainGoal" value="HYROX, sylwetka, dobra regeneracja i priorytet na nogi" / placeholder="seria">
+        <input id="mainGoal"  / placeholder="seria" placeholder="np. redukcja, siła, HYROX, poprawa nóg" value="HYROX, sylwetka, dobra regeneracja i priorytet na nogi">
       </div>
       <div class="field">
         <label for="coachNotes">Najważniejsze uwagi</label>
-        <textarea id="coachNotes" placeholder="krótki komentarz">Nie ciśnij każdej serii do granicy. Najpierw poprawiaj powtórzenia, potem ciężar. W słabszy dzień zrób minimum i wyjdź.</textarea>
+        <textarea id="coachNotes" placeholder="krótki komentarz" placeholder="np. bark bolał, RIR 0, słabszy sen, ciężko na nogach">Nie ciśnij każdej serii do granicy. Najpierw poprawiaj powtórzenia, potem ciężar. W słabszy dzień zrób minimum i wyjdź.</textarea>
       </div>
       <div class="note-box">
         <ul class="rules-list">
@@ -772,7 +638,7 @@
               <td><div class="week-box"><div class="series-grid three"><input data-key="d1e2t4s1" placeholder="seria 1"><input data-key="d1e2t4s2" placeholder="seria 2"><input data-key="d1e2t4s3" placeholder="seria 3"></div><textarea class="comment-input" data-key="d1e2t4c" placeholder="krótki komentarz"></textarea></div></td>
             </tr>
             <tr>
-              <td class="exercise-cell">Wiosłowanie na wyciągu dolnym wąskim chwytem</td>
+              <td class="exercise-cell">Wiosłowanie na kajak rowu dolnym wąskim chwytem</td>
               <td class="goal-cell">2 serie 10-12 powt.</td>
               <td><div class="week-box"><div class="series-grid two"><input data-key="d1e3t1s1" placeholder="seria 1"><input data-key="d1e3t1s2" placeholder="seria 2"></div><textarea class="comment-input" data-key="d1e3t1c" placeholder="krótki komentarz"></textarea></div></td>
               <td><div class="week-box"><div class="series-grid two"><input data-key="d1e3t2s1" placeholder="seria 1"><input data-key="d1e3t2s2" placeholder="seria 2"></div><textarea class="comment-input" data-key="d1e3t2c" placeholder="krótki komentarz"></textarea></div></td>
@@ -806,7 +672,7 @@
     <div class="hyrox-legend">
       <div>3 rundy</div>
       <div>slam ball</div>
-      <div>wyciąg</div>
+      <div>kajak row</div>
       <div>przerwa</div>
     </div>
   </td>
@@ -1009,6 +875,25 @@
   </div>
 
   <script>
+
+    function addDaysToDateString(dateStr, days) {
+      if (!dateStr) return "";
+      const d = new Date(dateStr + "T00:00:00");
+      if (isNaN(d.getTime())) return "";
+      d.setDate(d.getDate() + days);
+      const dd = String(d.getDate()).padStart(2, "0");
+      const mm = String(d.getMonth() + 1).padStart(2, "0");
+      return dd + "." + mm;
+    }
+
+    function getBlockDateLabel(block, week) {
+      const start = block.blockStart || block.blockstart || block.block_start || "";
+      const label = addDaysToDateString(start, (week - 1) * 7);
+      return label || ("Tydz. " + week);
+    }
+
+    const LAST_BLOCK_KEY = "hyrox-plan-v4-last-block";
+    const EDITING_BLOCK_KEY = "hyrox-plan-v4-editing-id";
     const STORAGE_KEY = "hyrox-plan-v4";
     const ARCHIVE_KEY = "hyrox-plan-v4-archive";
     const baseFields = ["athleteName","blockStart","mainGoal","coachNotes"];
@@ -1029,6 +914,14 @@
     function setData(data) {
       baseFields.forEach(id => {
         const el = document.getElementById(id);
+        if (el) el.value = "";
+      });
+      getAllInputs().forEach(el => {
+        el.value = "";
+      });
+
+      baseFields.forEach(id => {
+        const el = document.getElementById(id);
         if (el && data[id] !== undefined) el.value = data[id];
       });
       getAllInputs().forEach(el => {
@@ -1047,6 +940,7 @@
       const raw = localStorage.getItem(STORAGE_KEY);
       const data = raw ? JSON.parse(raw) : {};
       setData(data);
+      applyLastBlockHints();
     }
     function clearCurrentBlock() {
       if (!confirm("Na pewno wyczyścić bieżący blok?")) return;
@@ -1138,26 +1032,46 @@
         alert("Najpierw wpisz dane do bieżącego bloku.");
         return;
       }
+
       const adherence = weekNumbers.map(w => {
         const info = countFilledFieldsForWeek(w);
         return info.total ? Math.round((info.filled / info.total) * 100) : 0;
       });
+
       const archive = getArchive();
-      archive.push({
-        id: Date.now(),
-        label: (current.athleteName || "Plan") + " • blok " + (archive.length + 1),
-        blockStart: current.blockStart || "",
-        fieldCount: filled,
-        adherenceAvg: Math.round(adherence.reduce((a,b) => a+b, 0) / adherence.length),
-        data: current
-      });
+      const editingId = localStorage.getItem(EDITING_BLOCK_KEY);
+
+      if (editingId) {
+        const idx = archive.findIndex(x => String(x.id) === String(editingId));
+        if (idx !== -1) {
+          archive[idx] = {
+            ...archive[idx],
+            blockStart: current.blockStart || archive[idx].blockStart || "",
+            fieldCount: filled,
+            adherenceAvg: Math.round(adherence.reduce((a,b) => a+b, 0) / adherence.length),
+            data: current
+          };
+        }
+        localStorage.removeItem(EDITING_BLOCK_KEY);
+      } else {
+        archive.push({
+          id: Date.now(),
+          label: (current.athleteName || "Plan") + " • blok " + (archive.length + 1),
+          blockStart: current.blockStart || "",
+          fieldCount: filled,
+          adherenceAvg: Math.round(adherence.reduce((a,b) => a+b, 0) / adherence.length),
+          data: current
+        });
+      }
+
       saveArchive(archive);
-      localStorage.removeItem(STORAGE_KEY);
+      localStorage.setItem(LAST_BLOCK_KEY, JSON.stringify(current));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({}));
       loadData();
       renderHistory();
       updateStatuses();
       renderCharts();
-      alert("Blok został zamknięty i przeniesiony do historii.");
+      alert("Blok został zapisany do historii. Pola wyczyszczone, a poprzednie wyniki zostały ustawione jako podpowiedzi.");
     }
     function renderHistory() {
       const body = document.getElementById("historyBody");
@@ -1165,10 +1079,38 @@
       body.innerHTML = "";
       archive.slice().reverse().forEach(item => {
         const tr = document.createElement("tr");
-        tr.innerHTML = '<td>' + item.label + '</td><td>' + (item.blockStart || "—") + '</td><td>' + item.fieldCount + '</td><td>' + item.adherenceAvg + '%</td><td><button class="btn-soft" data-id="' + item.id + '">Usuń</button></td>';
+        tr.innerHTML = '<td>' + item.label + '</td><td>' + (item.blockStart || "—") + '</td><td>' + item.fieldCount + '</td><td>' + item.adherenceAvg + '%</td><td><div class="history-actions"><button class="btn-soft history-edit-btn" data-id="' + item.id + '">Edytuj</button><button class="btn-soft history-delete-btn" data-id="' + item.id + '">Usuń</button></div></td>';
         body.appendChild(tr);
       });
-      body.querySelectorAll("button").forEach(btn => {
+
+      body.querySelectorAll(".history-edit-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const id = Number(btn.dataset.id);
+          const selected = getArchive().find(x => x.id === id);
+          if (!selected) return;
+
+          const hasCurrentInputs = getAllInputs().some(el => (el.value || "").trim() !== "");
+          const hasCurrentBase = baseFields.some(field => {
+            const el = document.getElementById(field);
+            return el && (el.value || "").trim() !== "";
+          });
+          const shouldContinue = hasCurrentInputs || hasCurrentBase
+            ? confirm("Przywrócić ten blok do edycji? Obecne dane w głównym planie zostaną nadpisane.")
+            : confirm("Przywrócić ten blok do edycji?");
+
+          if (!shouldContinue) return;
+
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(selected.data || {}));
+          localStorage.setItem(EDITING_BLOCK_KEY, String(selected.id));
+          loadData();
+          updateStatuses();
+          renderCharts();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          alert("Blok został przywrócony do edycji w głównym planie.");
+        });
+      });
+
+      body.querySelectorAll(".history-delete-btn").forEach(btn => {
         btn.addEventListener("click", () => {
           const id = Number(btn.dataset.id);
           const filtered = getArchive().filter(x => x.id !== id);
@@ -1215,7 +1157,7 @@
             }
           });
           if (seriesEntries.length) {
-            labels.push("B" + (blockIndex + 1) + "-T" + week);
+            labels.push(getBlockDateLabel(block, week));
             maxWeights.push(Math.max(...seriesEntries.map(x => x.weight)));
             volumes.push(seriesEntries.reduce((sum, x) => sum + (x.weight * x.reps), 0));
           }
@@ -1234,7 +1176,7 @@
           const keys = Object.keys(block).filter(k => k.includes("t" + week));
           if (!keys.length) return;
           const filled = keys.filter(k => (block[k] || "").trim() !== "").length;
-          labels.push("B" + (blockIndex + 1) + "-T" + week);
+          labels.push(getBlockDateLabel(block, week));
           values.push(Math.round((filled / keys.length) * 100));
         });
       });
@@ -1249,7 +1191,7 @@
       canvas.height = rect.height * dpr;
       ctx.scale(dpr, dpr);
       ctx.clearRect(0, 0, rect.width, rect.height);
-      const pad = { top: 20, right: 10, bottom: 36, left: 35 };
+      const pad = { top: 20, right: 14, bottom: 44, left: 35 };
       const w = rect.width - pad.left - pad.right;
       const h = rect.height - pad.top - pad.bottom;
       ctx.strokeStyle = "rgba(255,255,255,.08)";
@@ -1290,9 +1232,14 @@
       ctx.font = "11px sans-serif";
       ctx.fillText(String(max) + suffix, 5, pad.top + 5);
       ctx.fillText(String(min) + suffix, 5, pad.top + h);
+      ctx.font = "10px sans-serif";
       labels.forEach((label, i) => {
         const x = pad.left + (w * i / Math.max(1, labels.length - 1));
-        ctx.fillText(label, x - 14, pad.top + h + 18);
+        const safeLabel = String(label || "");
+        let drawX = x - (safeLabel.length * 2.8);
+        if (i === 0) drawX = Math.max(pad.left - 2, drawX);
+        if (i === labels.length - 1) drawX = Math.min(pad.left + w - 28, drawX);
+        ctx.fillText(safeLabel, drawX, pad.top + h + 20);
       });
     }
     function renderCharts() {
@@ -1303,6 +1250,43 @@
       const adh = getAdherenceSeries();
       drawChart("adherenceChart", adh.labels, adh.values, "#f0b429", "%");
     }
+
+    function initializeHintDefaults() {
+      document.querySelectorAll("input[data-key], textarea.comment-input").forEach(el => {
+        if (!el.dataset.defaultPlaceholder) {
+          el.dataset.defaultPlaceholder = el.getAttribute("placeholder") || "";
+        }
+      });
+    }
+
+    function clearLastNotes() {
+      document.querySelectorAll(".last-note").forEach(el => el.remove());
+    }
+
+    function applyLastBlockHints() {
+      clearLastNotes();
+      const raw = localStorage.getItem(LAST_BLOCK_KEY);
+      const last = raw ? JSON.parse(raw) : {};
+
+      document.querySelectorAll("input[data-key]").forEach(input => {
+        const key = input.dataset.key;
+        const fallback = input.dataset.defaultPlaceholder || "";
+        input.setAttribute("placeholder", (!input.value && last[key]) ? last[key] : fallback);
+      });
+
+      document.querySelectorAll("textarea.comment-input").forEach(area => {
+        const key = area.dataset.key;
+        const fallback = area.dataset.defaultPlaceholder || "";
+        area.setAttribute("placeholder", fallback);
+        if (!area.value && last[key]) {
+          const note = document.createElement("div");
+          note.className = "last-note";
+          note.textContent = "Ostatnia uwaga: " + last[key];
+          area.parentNode.insertBefore(note, area);
+        }
+      });
+    }
+
     document.getElementById("saveBtn").addEventListener("click", saveData);
     document.getElementById("clearBtn").addEventListener("click", clearCurrentBlock);
     document.getElementById("archiveBtn").addEventListener("click", archiveBlock);
@@ -1317,6 +1301,7 @@
     if (!document.getElementById("blockStart").value) {
       document.getElementById("blockStart").value = new Date().toISOString().slice(0,10);
     }
+    initializeHintDefaults();
     loadData();
     updateStatuses();
     renderHistory();
